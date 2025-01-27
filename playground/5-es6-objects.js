@@ -1,35 +1,35 @@
-// Object property shorthand
+//* Object property shorthand
 
-const name = 'Andrew'
-const userAge = 27
+const name = 'Joshua'
+const userAge = 18
 
 const user = {
     name,
     age: userAge,
-    location: 'Philadelphia'
+    location: 'Benton, MO'
 }
 
 console.log(user)
 
-// Object destructuring
+//* Object destructuring
 
 const product = {
-    label: 'Red notebook',
+    label: 'Yellow notebook',
     price: 3,
     stock: 201,
     salePrice: undefined,
     rating: 4.2
 }
 
-// const label = product.label
-// const stock = product.stock
+//* const label = product.label
+//* const stock = product.stock
 
-// const {label:productLabel, stock, rating = 5} = product
-// console.log(productLabel)
-// console.log(stock)
-// console.log(rating)
+//* const {label:productLabel, stock, rating = 5} = product
+//* console.log(productLabel)
+//* console.log(stock)
+//* console.log(rating)
 
-const transaction = (type, { label, stock }) => {
+const transaction = (type, { label, stock = 0 } = {}) => {
     console.log(type, label, stock)
 }
 
