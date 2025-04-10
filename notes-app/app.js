@@ -1,4 +1,4 @@
-// const chalk = require('chalk')
+const chalk = require('chalk')
 const yargs = require('yargs')
 const notes = require('./notes.js')
 
@@ -46,15 +46,8 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'List your notes',
-    builder: {
-        title: {
-            describe: 'Note title',
-            demandOption: true,
-            type: 'string'
-        }
-    },
-    handler(argv) {
-        notes.listNotes(argv.title)
+    handler() {
+        notes.listNotes()
     }
 })
 
